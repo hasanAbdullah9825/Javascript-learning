@@ -16,4 +16,8 @@
 
 // My last name is ${lastName}`);
 
-console.log(2+`5`);
+// console.log(2+`5`);
+
+let x=5;
+console.log(x+10);
+console.log(String(x)+10);
