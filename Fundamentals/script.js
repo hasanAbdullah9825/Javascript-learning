@@ -8,7 +8,12 @@
 // console.log(typeof myName);
 // console.log(typeof js);
 
-const firstName=`Hasan`;
-const lastName=`chowdhury`;
+// const firstName=`Hasan`;
+// const lastName=`chowdhury`;
 
-console.log(`My first name is ${firstName} and my last name is ${lastName}`);
+// console.log(`My first name is ${firstName} and my last name is ${lastName}`);
+// console.log(`My first name is ${firstName}
+
+// My last name is ${lastName}`);
+
+console.log(2+`5`);
