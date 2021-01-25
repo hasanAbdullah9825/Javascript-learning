@@ -1,3 +1,5 @@
+
+'use strict';
 // let js="amazing";
 // if(js==="amazing")
 // alert('js is fun');
@@ -30,33 +32,49 @@
 //     console.log(`you are not adult because your are ${age} years old`)
 // }
 
-const d1=96;
-const d2=108;
-const d3=89;
+// const d1=96;
+// const d2=108;
+// const d3=89;
 
-const k1=88;
-const k2=91;
-const k3=110;
+// const k1=88;
+// const k2=91;
+// const k3=110;
 
-averageD= (d1+d2+d3)/3;
-averagek=(k1+k2+k3)/3;
+// averageD= (d1+d2+d3)/3;
+// averagek=(k1+k2+k3)/3;
 
-if(averageD>averagek && (averageD>=10 || averagek>=100) ){
-    console.log(`Dolphins team is the winner`);
-}
-else if(averagek===averagek)
-{
-    console.log(`Drawwwwwww`);
+// if(averageD>averagek && (averageD>=10 || averagek>=100) ){
+//     console.log(`Dolphins team is the winner`);
+// }
+// else if(averagek===averagek)
+// {
+//     console.log(`Drawwwwwww`);
 
-}
+// }
 
-else
-{
-    console.log(`Koalas is the winner`);
-}
+// else
+// {
+//     console.log(`Koalas is the winner`);
+// }
 
 
 
+// function addition(n1,   n2)
+// {
+
+//     console.log(n1,n2);
+
+//     console.log(n1,n2);
+// }
+
+
+// addition(5,3);
+
+const age =function(bitrthYear){
+    return 2021-bitrthYear;
+} 
+
+console.log(age(1996));
 
 
 
