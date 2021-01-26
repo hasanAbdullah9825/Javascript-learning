@@ -70,18 +70,26 @@
 
 // addition(5,3);
 
-const age =function(bitrthYear){
-    return 2021-bitrthYear;
-} 
+// const age =function(bitrthYear){
+//     return 2021-bitrthYear;
+// } 
+
+// console.log(age(1996));
+
+
+// Arrow function
+
+const age= birthyear=>2021-birthyear;
 
 console.log(age(1996));
 
+// arrow function with two parameter
 
+const age= (birthYear,firstName)=>`${firstName}'s age is ${2021-birthYear}`;
+console.log(age(1996,'Hasan'));
 
-
-
-
-
+const age= (birthYear,firstName)=>{ return `${firstName}'s age is ${2021-birthYear}`};
+console.log(age(1996,'Hasan'));
 
 
 
