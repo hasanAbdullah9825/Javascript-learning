@@ -79,17 +79,40 @@
 
 // Arrow function
 
-const age= birthyear=>2021-birthyear;
+// const age= birthyear=>2021-birthyear;
 
-console.log(age(1996));
+// console.log(age(1996));
 
 // arrow function with two parameter
 
-const age= (birthYear,firstName)=>`${firstName}'s age is ${2021-birthYear}`;
-console.log(age(1996,'Hasan'));
+// const age= (birthYear,firstName)=>`${firstName}'s age is ${2021-birthYear}`;
+// console.log(age(1996,'Hasan'));
 
-const age= (birthYear,firstName)=>{ return `${firstName}'s age is ${2021-birthYear}`};
-console.log(age(1996,'Hasan'));
+// const age= (birthYear,firstName)=>{ return `${firstName}'s age is ${2021-birthYear}`};
+// console.log(age(1996,'Hasan'));
+
+let calcAverage =(score1,score2,score3)=>(score1+score2+score3)/3;
+const avgD=calcAverage(100,2000,500);
+const avgK=calcAverage(50,54,49);
+// console.log(avgD);
+// console.log(avgK);
+
+
+let checkWinner=function(avgD,avgK){
+    
+    if(avgD>=2*avgK){
+        console.log(`Dolhins wins (${avgD} vs ${avgK})`);
+    }
+    else if(avgK>=2*avgD){
+        console.log(`Koalas(${avgK}vs${avgD})`);
+    }
+
+    else{
+        console.log('NoOne wins');
+    }
+}
+
+checkWinner(avgD,avgK);
 
 
 
