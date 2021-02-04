@@ -91,37 +91,67 @@
 // const age= (birthYear,firstName)=>{ return `${firstName}'s age is ${2021-birthYear}`};
 // console.log(age(1996,'Hasan'));
 
-let calcAverage =(score1,score2,score3)=>(score1+score2+score3)/3;
-const avgD=calcAverage(100,2000,500);
-const avgK=calcAverage(50,54,49);
+// let calcAverage =(score1,score2,score3)=>(score1+score2+score3)/3;
+// const avgD=calcAverage(100,2000,500);
+// const avgK=calcAverage(50,54,49);
 // console.log(avgD);
 // console.log(avgK);
 
 
-let checkWinner=function(avgD,avgK){
+// let checkWinner=function(avgD,avgK){
     
-    if(avgD>=2*avgK){
-        console.log(`Dolhins wins (${avgD} vs ${avgK})`);
-    }
-    else if(avgK>=2*avgD){
-        console.log(`Koalas(${avgK}vs${avgD})`);
-    }
+//     if(avgD>=2*avgK){
+//         console.log(`Dolhins wins (${avgD} vs ${avgK})`);
+//     }
+//     else if(avgK>=2*avgD){
+//         console.log(`Koalas(${avgK}vs${avgD})`);
+//     }
 
-    else{
-        console.log('NoOne wins');
+//     else{
+//         console.log('NoOne wins');
+//     }
+// }
+
+// checkWinner(avgD,avgK);
+
+
+
+
+// const students=['hasan','mridul','boltu'];
+
+// const a=students.push('modoris');//add a new value at the end and a contains length of array after push
+// const b=students.pop()// delete last elements and  b store last element  which was deleted
+// students.unshift('Bulu miya');//add element at the first of the array
+// students.shift()//delete first element from array
+
+// students.indexOf('mridul') // index of an element
+// students.includes('bob')  // give is the elements is available or not
+
+
+
+
+
+const Mark={
+    fullName: 'Mark Miller',
+    calcBMI:function(mass,height){
+        return this.BMI= mass / height ** 2 ;
+
     }
 }
 
-checkWinner(avgD,avgK);
+const John={
+    fullName: 'John Smith',
+    calcBMI:function(mass,height){
+        return this.BMI= mass / height ** 2 ;
 
+    }
+}
 
-
-
-
-
-
-
-
-
-
+if(Mark.calcBMI(78,1.69)>John.calcBMI(92,1.95)){
+    console.log(`${Mark.fullName}'s BMI(${Mark.BMI}) is  higher than ${John.fullName}'s BMI(${John.BMI})`);
+}
+else
+{
+    console.log(`${John.fullName}'s BMI(${John.BMI}) is  higher than ${Mark.fullName}'s BMI(${Mark.BMI})`);
+}
 
