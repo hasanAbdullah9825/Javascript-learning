@@ -131,27 +131,54 @@
 
 
 
-const Mark={
-    fullName: 'Mark Miller',
-    calcBMI:function(mass,height){
-        return this.BMI= mass / height ** 2 ;
+// const Mark={
+//     fullName: 'Mark Miller',
+//     calcBMI:function(mass,height){
+//         return this.BMI= mass / height ** 2 ;
 
+//     }
+// }
+
+// const John={
+//     fullName: 'John Smith',
+//     calcBMI:function(mass,height){
+//         return this.BMI= mass / height ** 2 ;
+
+//     }
+// }
+
+// if(Mark.calcBMI(78,1.69)>John.calcBMI(92,1.95)){
+//     console.log(`${Mark.fullName}'s BMI(${Mark.BMI}) is  higher than ${John.fullName}'s BMI(${John.BMI})`);
+// }
+// else
+// {
+//     console.log(`${John.fullName}'s BMI(${John.BMI}) is  higher than ${Mark.fullName}'s BMI(${Mark.BMI})`);
+// }
+
+//arrow vs normal function
+// Regular Functions vs. Arrow Functions
+// var firstName = 'Matilda';
+
+  const hasan={
+    year: 1991,
+    calcAge: function () {
+      // console.log(this);
+      console.log(2037 - this.year);
+    //   const isMillenial=function(){
+    //     console.log(this.year>=1981&&this.year<=1996);  
+    // }
+    // its a problem
+      // Solution 1
+      // const self = this; // self or that
+      // const isMillenial = function () {
+      //   console.log(self);
+      //   console.log(self.year >= 1981 && self.year <= 1996);
+      // };
+      // Solution 2
+   
+     const isMillenial=()=>console.log(this.year>=1981&&this.year<=1996);
+    
+      isMillenial();
     }
-}
-
-const John={
-    fullName: 'John Smith',
-    calcBMI:function(mass,height){
-        return this.BMI= mass / height ** 2 ;
-
-    }
-}
-
-if(Mark.calcBMI(78,1.69)>John.calcBMI(92,1.95)){
-    console.log(`${Mark.fullName}'s BMI(${Mark.BMI}) is  higher than ${John.fullName}'s BMI(${John.BMI})`);
-}
-else
-{
-    console.log(`${John.fullName}'s BMI(${John.BMI}) is  higher than ${Mark.fullName}'s BMI(${Mark.BMI})`);
-}
-
+  }
+  hasan.calcAge();
