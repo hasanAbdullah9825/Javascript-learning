@@ -20,53 +20,95 @@ const restaurant = {
       close: 24,
     },
   },
+
+  orderPizza:
+    function(mainItem,...othersItem){
+        console.log(mainItem);
+        console.log(othersItem);
+    }
+  
 };
-//Spread operator
+
+******** Rest patterns*********
+
+SPREAD, because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
+
+Rest becuase on Left side of =
+const [a,b,...others]=[1,2,3,4,5];
+console.log(a,b,others);
+const [pizza,,risotto,...otherFood]=[...restaurant.mainMenu,...restaurant.starterMenu];
+console.log(pizza,risotto,otherFood);
+
+objects
+const {sat,...weekdays}=restaurant.openingHours;
+console.log(sat,weekdays);
+
+function add(...numbers){
+  let sum=0;
+  for(let i=0;i<numbers.length;i++)
+  {
+    sum+=numbers[i];
+  }
+console.log(sum);
+
+}
+
+
+const x=[1,2,3,4,5];
+add(...x);
+
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+ restaurant.orderPizza('mashrooms');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//************Spread operator**************
 //problem
-const arr=[7,8,9];
-const newArr=[1,2,arr[0],arr[1],arr[2]];
-console.log(newArr);
+// const arr=[7,8,9];
+// const newArr=[1,2,arr[0],arr[1],arr[2]];
+// console.log(newArr);
 
 // here is shortcut spread operator
 
-const arr2=[1,2,...arr];
-console.log(arr2);
+// const arr2=[1,2,...arr];
+// console.log(arr2);
 
-const mainMenueCopy=[...restaurant.mainMenu,'rice'];
-console.log(mainMenueCopy);
+// const mainMenueCopy=[...restaurant.mainMenu,'rice'];
+// console.log(mainMenueCopy);
 //join two array
-const menu=[...restaurant.mainMenu,...restaurant.starterMenu];
-console.log(menu);
+// const menu=[...restaurant.mainMenu,...restaurant.starterMenu];
+// console.log(menu);
 // Iterables: arrays, strings, maps, sets. NOT objects
-const str="hasan";
-const letters=[...str,' ',"!"];
-console.log(letters);
+// const str="hasan";
+// const letters=[...str,' ',"!"];
+// console.log(letters);
 
 // sObjects 
-const newresturant={foundation:1998,...restaurant,founder:"hasan"};
-console.log(newresturant);
+// const newresturant={foundation:1998,...restaurant,founder:"hasan"};
+// console.log(newresturant);
 
-const restaurantCopy={...restaurant};
+// const restaurantCopy={...restaurant};
 
-restaurantCopy.name="panshi";
-console.log(restaurantCopy.name);
- console.log(restaurant.name);
-
-
+// restaurantCopy.name="panshi";
+// console.log(restaurantCopy.name);
+//  console.log(restaurant.name);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+//************destructuring*************
 
  //const arr=[2,3,5];
 // const a=arr[0];
