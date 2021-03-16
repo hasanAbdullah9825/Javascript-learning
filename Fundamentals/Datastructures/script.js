@@ -29,38 +29,21 @@ const restaurant = {
   
 };
 
-******** Rest patterns*********
 
-SPREAD, because on RIGHT side of =
-const arr = [1, 2, ...[3, 4]];
+// Short circuiting(&& and ||)
+console.log(3||"hasan");
+console.log(''||"hasan");
+console.log(true|| 0);
+console.log(undefined || null);
+console.log(undefined || 0||''||"hello"||25||null);
+restaurant.numGuest=0;
 
-Rest becuase on Left side of =
-const [a,b,...others]=[1,2,3,4,5];
-console.log(a,b,others);
-const [pizza,,risotto,...otherFood]=[...restaurant.mainMenu,...restaurant.starterMenu];
-console.log(pizza,risotto,otherFood);
-
-objects
-const {sat,...weekdays}=restaurant.openingHours;
-console.log(sat,weekdays);
-
-function add(...numbers){
-  let sum=0;
-  for(let i=0;i<numbers.length;i++)
-  {
-    sum+=numbers[i];
-  }
-console.log(sum);
-
-}
-
-
-const x=[1,2,3,4,5];
-add(...x);
-
-
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
- restaurant.orderPizza('mashrooms');
+//Long
+const guest1= restaurant.numGuest?restaurant.numGuest:20;
+console.log(guest1);
+//short end
+const gueast2=restaurant.numGuest||20;
+console.log(gueast2);
 
 
 
@@ -71,6 +54,47 @@ restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
 
 
+
+
+
+
+
+
+
+
+
+// ******** Rest patterns*********
+
+// SPREAD, because on RIGHT side of =
+// const arr = [1, 2, ...[3, 4]];
+
+// Rest becuase on Left side of =
+// const [a,b,...others]=[1,2,3,4,5];
+// console.log(a,b,others);
+// const [pizza,,risotto,...otherFood]=[...restaurant.mainMenu,...restaurant.starterMenu];
+// console.log(pizza,risotto,otherFood);
+
+// objects
+// const {sat,...weekdays}=restaurant.openingHours;
+// console.log(sat,weekdays);
+
+// function add(...numbers){
+//   let sum=0;
+//   for(let i=0;i<numbers.length;i++)
+//   {
+//     sum+=numbers[i];
+//   }
+// console.log(sum);
+
+// }
+
+
+// const x=[1,2,3,4,5];
+// add(...x);
+
+
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+//  restaurant.orderPizza('mashrooms');
 
 
 
@@ -96,7 +120,7 @@ restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 // const letters=[...str,' ',"!"];
 // console.log(letters);
 
-// sObjects 
+//Objects 
 // const newresturant={foundation:1998,...restaurant,founder:"hasan"};
 // console.log(newresturant);
 
