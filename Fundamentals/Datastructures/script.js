@@ -30,7 +30,8 @@ const restaurant = {
 };
 
 
-// Short circuiting(&& and ||)
+//*************Short circuiting(&& and ||)**************
+//||
 console.log(3||"hasan");
 console.log(''||"hasan");
 console.log(true|| 0);
@@ -45,6 +46,20 @@ console.log(guest1);
 const gueast2=restaurant.numGuest||20;
 console.log(gueast2);
 
+
+// &&
+
+console.log(0 &&"hasan");
+console.log(8 && "hasan");
+console.log('hello'&& 23 && null && "hasan");
+
+//practical example
+//Long
+if(restaurant.orderPizza){
+  restaurant.orderPizza("biriyani","nehari","Faluda");
+}
+//short end
+restaurant.orderPizza && restaurant.orderPizza("biriyani","nehari","Faluda");
 
 
 
