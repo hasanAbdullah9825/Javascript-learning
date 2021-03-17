@@ -30,50 +30,54 @@ const restaurant = {
 };
 
 
+
+
+
+// ***********The Nullish Coalescing Operator************
+
+ restaurant.numGuest=0;
+ const guests=restaurant.numGuest||10; 
+ console.log(guests);
+
+ const guest1= restaurant.numGuest??10;
+ console.log(guest1);
+
+
+
+
+
+
+
 //*************Short circuiting(&& and ||)**************
 //||
-console.log(3||"hasan");
-console.log(''||"hasan");
-console.log(true|| 0);
-console.log(undefined || null);
-console.log(undefined || 0||''||"hello"||25||null);
-restaurant.numGuest=0;
+// console.log(3||"hasan");
+// console.log(''||"hasan");
+// console.log(true|| 0);
+// console.log(undefined || null);
+// console.log(undefined || 0||''||"hello"||25||null);
+// restaurant.numGuest=0;
 
 //Long
-const guest1= restaurant.numGuest?restaurant.numGuest:20;
-console.log(guest1);
+// const guest1= restaurant.numGuest?restaurant.numGuest:20;
+// console.log(guest1);
 //short end
-const gueast2=restaurant.numGuest||20;
-console.log(gueast2);
+// const gueast2=restaurant.numGuest||20;
+// console.log(gueast2);
 
 
 // &&
 
-console.log(0 &&"hasan");
-console.log(8 && "hasan");
-console.log('hello'&& 23 && null && "hasan");
+// console.log(0 &&"hasan");
+// console.log(8 && "hasan");
+// console.log('hello'&& 23 && null && "hasan");
 
 //practical example
 //Long
-if(restaurant.orderPizza){
-  restaurant.orderPizza("biriyani","nehari","Faluda");
-}
+// if(restaurant.orderPizza){
+//   restaurant.orderPizza("biriyani","nehari","Faluda");
+// }
 //short end
-restaurant.orderPizza && restaurant.orderPizza("biriyani","nehari","Faluda");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// restaurant.orderPizza && restaurant.orderPizza("biriyani","nehari","Faluda");
 
 
 
