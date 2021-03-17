@@ -35,14 +35,25 @@ const restaurant = {
 
 // ***********The Nullish Coalescing Operator************
 
- restaurant.numGuest=0;
- const guests=restaurant.numGuest||10; 
- console.log(guests);
+//  restaurant.numGuest=0;
+//  const guests=restaurant.numGuest||10; 
+//  console.log(guests);
 
- const guest1= restaurant.numGuest??10;
- console.log(guest1);
+//  const guest1= restaurant.numGuest??10;
+//  console.log(guest1);
 
+//***********The for-of Loop ***********
 
+const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
+for (const item of menu)
+{
+  console.log(item);
+}
+
+for(const [index,name] of menu.entries()){
+console.log(`${index}: ${name}`);
+
+}
 
 
 
