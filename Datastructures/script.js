@@ -1,4 +1,23 @@
 'use strict'
+
+const weekdays=["sat","sun","mon","tue",'wed',"thu","fri"];
+
+// ES6 Enhanced Object literals
+const openingHours= {
+  [weekdays[5]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[6]]: {
+    open: 11,
+    close: 23,
+  },
+ [ weekdays[0]]: {
+    open: 0, 
+    close: 24,
+  },
+};
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -6,28 +25,43 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
+  
+  // order: function(starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+
+
+  // ES6 Enhanced Object literals
+  order(starterIndex, mainIndex){
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
+  // ES6 Enhanced Object literals
+  openingHours,
 
   orderPizza:
     function(mainItem,...othersItem){
         console.log(mainItem);
         console.log(othersItem);
-    }
+    },
+    
   
 };
+
+
+console.log(restaurant.openingHours);
+console.log(restaurant.order(1,2));
+
+console.log(restaurant.openingHours.sat);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -44,16 +78,16 @@ const restaurant = {
 
 //***********The for-of Loop ***********
 
-const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
-for (const item of menu)
-{
-  console.log(item);
-}
+// const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
+// for (const item of menu)
+// {
+//   console.log(item);
+// }
 
-for(const [index,name] of menu.entries()){
-console.log(`${index}: ${name}`);
+// for(const [index,name] of menu.entries()){
+// console.log(`${index}: ${name}`);
 
-}
+// }
 
 
 
