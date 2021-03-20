@@ -48,22 +48,32 @@ const restaurant = {
   
 };
 
+//**********optional chaining (?.)*************/
 
-console.log(restaurant.openingHours);
-console.log(restaurant.order(1,2));
+// It is a problem because mon day does not exist
+//console.log(restaurant.openingHours.mon.open);
 
-console.log(restaurant.openingHours.sat);
-
-
-
-
-
-
-
+//solution
+//for property
+console.log(restaurant.openingHours.mon?.open);
+//for method
+console.log(restaurant.order?.(0,1));
 
 
 
 
+
+
+
+
+
+
+
+
+// console.log(restaurant.openingHours);
+// console.log(restaurant.order(1,2));
+
+// console.log(restaurant.openingHours.sat);
 
 
 
