@@ -48,6 +48,29 @@ const restaurant = {
   
 };
 
+//***********Looping objects**********
+const properties= Object.keys(openingHours);
+console.log(properties);
+
+for(const day of Object.keys(openingHours)){
+  console.log(day);
+}
+
+for(const {open,close} of Object.values(openingHours)){
+  console.log(open,close);
+}
+//[key,values]
+for(const [day,{open,close}] of Object.entries(openingHours)){
+  console.log(day,open,close);
+}
+
+
+
+
+
+
+
+
 //**********optional chaining (?.)*************/
 
 // It is a problem because mon day does not exist
@@ -55,18 +78,9 @@ const restaurant = {
 
 //solution
 //for property
-console.log(restaurant.openingHours.mon?.open);
+// console.log(restaurant.openingHours.mon?.open);
 //for method
-console.log(restaurant.order?.(0,1));
-
-
-
-
-
-
-
-
-
+// console.log(restaurant.order?.(0,1));
 
 
 
