@@ -48,21 +48,89 @@ const restaurant = {
   
 };
 
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+  [
+  'Neuer',
+  'Pavard',
+  'Martinez',
+  'Alaba',
+  'Davies',
+  'Kimmich',
+  'Goretzka',
+  'Coman',
+  'Muller',
+  'Gnarby',
+  'Lewandowski',
+  ],
+  [
+  'Burki',
+  'Schulz',
+  'Hummels',
+  'Akanji',
+  'Hakimi',
+  'Weigl',
+  'Witsel',
+  'Hazard',
+  'Brandt',
+  'Sancho',
+  'Gotze',
+  ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+  'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+  team1: 1.33,
+  x: 3.25,
+  team2: 6.5,
+  },
+  };
+
+
+//Summery of Modern operatoes and Datastructures--1
+  for(const [goalNo,playerName] of game.scored.entries()){
+   console.log(`Goal ${goalNo} : ${playerName}`);
+  }
+  const odds=Object.values(game.odds);
+  let sum=0;
+  console.log(odds);
+  for(const odd of odds)
+    sum+=odd;
+
+    const average=sum/odds.length;
+    console.log(average);
+  
+
+    //Odd of victory Bayern Munich: 1.33
+
+    for(const [key,odd] of Object.entries(game.odds)){
+      key==="x"?console.log(`odd of draw: ${odd}`):console.log(`victory of ${game[key]} : ${odd} `);
+      
+    }
+
+
+
+
 //***********Looping objects**********
-const properties= Object.keys(openingHours);
-console.log(properties);
+// const properties= Object.keys(openingHours);
+// console.log(properties);
 
-for(const day of Object.keys(openingHours)){
-  console.log(day);
-}
+// for(const day of Object.keys(openingHours)){
+//   console.log(day);
+// }
 
-for(const {open,close} of Object.values(openingHours)){
-  console.log(open,close);
-}
+// for(const {open,close} of Object.values(openingHours)){
+//   console.log(open,close);
+// }
 //[key,values]
-for(const [day,{open,close}] of Object.entries(openingHours)){
-  console.log(day,open,close);
-}
+// for(const [day,{open,close}] of Object.entries(openingHours)){
+//   console.log(day,open,close);
+// }
 
 
 
