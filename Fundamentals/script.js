@@ -77,14 +77,14 @@
 // console.log(age(1996));
 
 //type conversion
-const inputyear= '100';
-console.log(typeof inputyear);
-console.log(Number(inputyear),inputyear);
-console.log(inputyear+5);
-console.log(Number(inputyear)+5);
+// const inputyear= '100';
+// console.log(typeof inputyear);
+// console.log(Number(inputyear),inputyear);
+// console.log(inputyear+5);
+// console.log(Number(inputyear)+5);
 
-console.log(Number('hasan'));//not a number
-console.log(typeof a); // undefined
+// console.log(Number('hasan'));//not a number
+// console.log(typeof a); // undefined
 
 //type coercion or Automatic Type Conversion
 
@@ -96,12 +96,25 @@ console.log(typeof a); // undefined
 //"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
 
 
-console.log("5"+2);
-console.log("5"-2);
-console.log("a"-"b");
-console.log("5"*"2"+5+"1");
+// console.log("5"+2);
+// console.log("5"-2);
+// console.log("a"-"b");
+// console.log("5"*"2"+5+"1");
+
+// let n="12";
+// n=n+1;// converted to string
+// console.log(n);
+// n=n-1//converted to number
+// console.log(n);
 
 
+// falsy values: 0, '', undefined, null, NaN
+
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
 
 
 
