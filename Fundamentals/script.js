@@ -76,6 +76,45 @@
 
 // console.log(age(1996));
 
+//type conversion
+const inputyear= '100';
+console.log(typeof inputyear);
+console.log(Number(inputyear),inputyear);
+console.log(inputyear+5);
+console.log(Number(inputyear)+5);
+
+console.log(Number('hasan'));//not a number
+console.log(typeof a); // undefined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Arrow function
 
@@ -159,11 +198,11 @@
 // Regular Functions vs. Arrow Functions
 // var firstName = 'Matilda';
 
-  const hasan={
-    year: 1991,
-    calcAge: function () {
+  // const hasan={
+  //   year: 1991,
+  //   calcAge: function () {
       // console.log(this);
-      console.log(2037 - this.year);
+      // console.log(2037 - this.year);
     //   const isMillenial=function(){
     //     console.log(this.year>=1981&&this.year<=1996);  
     // }
@@ -176,9 +215,11 @@
       // };
       // Solution 2
    
-     const isMillenial=()=>console.log(this.year>=1981&&this.year<=1996);
+  //    const isMillenial=()=>console.log(this.year>=1981&&this.year<=1996);
     
-      isMillenial();
-    }
-  }
-  hasan.calcAge();
+  //     isMillenial();
+  //   }
+  // }
+  // hasan.calcAge();
+
+
