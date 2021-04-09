@@ -1,9 +1,9 @@
 'use strict'
 
-const weekdays=["sat","sun","mon","tue",'wed',"thu","fri"];
+const weekdays = ["sat", "sun", "mon", "tue", 'wed', "thu", "fri"];
 
 // ES6 Enhanced Object literals
-const openingHours= {
+const openingHours = {
   [weekdays[5]]: {
     open: 12,
     close: 22,
@@ -12,8 +12,8 @@ const openingHours= {
     open: 11,
     close: 23,
   },
- [ weekdays[0]]: {
-    open: 0, 
+  [weekdays[0]]: {
+    open: 0,
     close: 24,
   },
 };
@@ -25,14 +25,14 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  
+
   // order: function(starterIndex, mainIndex) {
   //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   // },
 
 
   // ES6 Enhanced Object literals
-  order(starterIndex, mainIndex){
+  order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
@@ -40,12 +40,12 @@ const restaurant = {
   openingHours,
 
   orderPizza:
-    function(mainItem,...othersItem){
-        console.log(mainItem);
-        console.log(othersItem);
+    function (mainItem, ...othersItem) {
+      console.log(mainItem);
+      console.log(othersItem);
     },
-    
-  
+
+
 };
 
 
@@ -53,65 +53,85 @@ const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
   players: [
-  [
-  'Neuer',
-  'Pavard',
-  'Martinez',
-  'Alaba',
-  'Davies',
-  'Kimmich',
-  'Goretzka',
-  'Coman',
-  'Muller',
-  'Gnarby',
-  'Lewandowski',
-  ],
-  [
-  'Burki',
-  'Schulz',
-  'Hummels',
-  'Akanji',
-  'Hakimi',
-  'Weigl',
-  'Witsel',
-  'Hazard',
-  'Brandt',
-  'Sancho',
-  'Gotze',
-  ],
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
   ],
   score: '4:0',
   scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
-  'Hummels'],
+    'Hummels'],
   date: 'Nov 9th, 2037',
   odds: {
-  team1: 1.33,
-  x: 3.25,
-  team2: 6.5,
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
   },
-  };
+};
 
 
 //Summery of Modern operatoes and Datastructures--1
-  for(const [goalNo,playerName] of game.scored.entries()){
-   console.log(`Goal ${goalNo} : ${playerName}`);
-  }
-  const odds=Object.values(game.odds);
-  let sum=0;
-  console.log(odds);
-  for(const odd of odds)
-    sum+=odd;
+// for (const [goalNo, playerName] of game.scored.entries()) {
+//   console.log(`Goal ${goalNo} : ${playerName}`);
+// }
+// const odds = Object.values(game.odds);
+// let sum = 0;
+// console.log(odds);
+// for (const odd of odds)
+//   sum += odd;
 
-    const average=sum/odds.length;
-    console.log(average);
-  
+// const average = sum / odds.length;
+// console.log(average);
 
-    //Odd of victory Bayern Munich: 1.33
 
-    for(const [key,odd] of Object.entries(game.odds)){
-      key==="x"?console.log(`odd of draw: ${odd}`):console.log(`victory of ${game[key]} : ${odd} `);
-      
-    }
+//Odd of victory Bayern Munich: 1.33
+
+// for (const [key, odd] of Object.entries(game.odds)) {
+//   key === "x" ? console.log(`odd of draw: ${odd}`) : console.log(`victory of ${game[key]} : ${odd} `);
+
+// }
+
+
+
+//***********sets********
+const orderSet = new Set(["Biriyani", "grill", "salad", "grill"]);
+console.log(orderSet.size);
+console.log(new Set("hasan"));
+console.log(orderSet.has("grill"));
+console.log(orderSet.add("Biscuit"));
+console.log(orderSet.delete("grill"));
+console.log(orderSet);
+for (const order of orderSet) {
+  console.log(order);
+}
+orderSet.clear();
+console.log(orderSet);
+
+
+
+
 
 
 
@@ -314,6 +334,8 @@ const game = {
 
 // const[p=1,q=2,r=3]=[4,5];
 // console.log(p,q,r);
+
+
 
 
 

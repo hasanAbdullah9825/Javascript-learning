@@ -110,34 +110,22 @@
 
 // falsy values: 0, '', undefined, null, NaN
 
-console.log(Boolean(0));
-console.log(Boolean(''));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(NaN));
+// console.log(Boolean(0));
+// console.log(Boolean(''));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
 
+// Equality Operators: == vs. ===
 
+let age = "18";
 
+if (age == 18) { console.log("you are adult"); }
+if (age === 18) { console.log("you are adult"); }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Ternary opoerator
+age === 18 ? console.log("you are adult") : '';
+age == 18 ? console.log("you are  adult") : '';
 
 
 
@@ -165,7 +153,7 @@ console.log(Boolean(NaN));
 
 
 // let checkWinner=function(avgD,avgK){
-    
+
 //     if(avgD>=2*avgK){
 //         console.log(`Dolhins wins (${avgD} vs ${avgK})`);
 //     }
@@ -225,28 +213,140 @@ console.log(Boolean(NaN));
 // Regular Functions vs. Arrow Functions
 // var firstName = 'Matilda';
 
-  // const hasan={
-  //   year: 1991,
-  //   calcAge: function () {
-      // console.log(this);
-      // console.log(2037 - this.year);
-    //   const isMillenial=function(){
-    //     console.log(this.year>=1981&&this.year<=1996);  
-    // }
-    // its a problem
-      // Solution 1
-      // const self = this; // self or that
-      // const isMillenial = function () {
-      //   console.log(self);
-      //   console.log(self.year >= 1981 && self.year <= 1996);
-      // };
-      // Solution 2
-   
-  //    const isMillenial=()=>console.log(this.year>=1981&&this.year<=1996);
-    
-  //     isMillenial();
-  //   }
-  // }
-  // hasan.calcAge();
+// const hasan={
+//   year: 1991,
+//   calcAge: function () {
+// console.log(this);
+// console.log(2037 - this.year);
+//   const isMillenial=function(){
+//     console.log(this.year>=1981&&this.year<=1996);  
+// }
+// its a problem
+// Solution 1
+// const self = this; // self or that
+// const isMillenial = function () {
+//   console.log(self);
+//   console.log(self.year >= 1981 && self.year <= 1996);
+// };
+// Solution 2
+
+//    const isMillenial=()=>console.log(this.year>=1981&&this.year<=1996);
+
+//     isMillenial();
+//   }
+// }
+// hasan.calcAge();
 
 
+const weekdays = ["sat", "sun", "mon", "tue", 'wed', "thu", "fri"];
+
+// ES6 Enhanced Object literals
+const openingHours = {
+  [weekdays[5]]: {
+    open: 12,
+    close: 22,
+  },
+  [weekdays[6]]: {
+    open: 11,
+    close: 23,
+  },
+  [weekdays[0]]: {
+    open: 0,
+    close: 24,
+  },
+};
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+
+  // order: function(starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
+
+
+  // ES6 Enhanced Object literals
+  order(starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  // ES6 Enhanced Object literals
+  openingHours,
+
+  orderPizza:
+    function (mainItem, ...othersItem) {
+      console.log(mainItem);
+      console.log(othersItem);
+    },
+
+
+};
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+    'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+
+//revission 
+
+// for(const property in restaurant)
+// {
+//   console.log(`${property}:${restaurant[property]}`);
+// }
+
+// console.log(restaurant.categories);
+
+// for(const item of restaurant.categories.entries()){
+
+//   console.log(item);
+// }
+
+// for (const item of Object.entries(restaurant)) {
+//   console.log(item);
+// }
+
+restaurant.categories.splice(1,0,"panshi");
+console.log(restaurant.categories);
