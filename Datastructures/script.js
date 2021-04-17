@@ -116,29 +116,29 @@ const game = {
 
 //**********  Maps: Fundamentals************
 
-const rest = new Map();
-rest.set('name', 'panshi');
-rest.set(1, 'Firenze, Italy');
-console.log(rest.set(2,"pach vai,sylhet"));
-rest.set('categories',['chinise','italiyan','bangali','thai']).set('open',11).set('close',23).set(true,"we are open").set(false,"we are closed");
-console.log(rest);
+// const rest = new Map();
+// rest.set('name', 'panshi');
+// rest.set(1, 'Firenze, Italy');
+// console.log(rest.set(2,"pach vai,sylhet"));
+// rest.set('categories',['chinise','italiyan','bangali','thai']).set('open',11).set('close',23).set(true,"we are open").set(false,"we are closed");
+// console.log(rest);
 
-console.log(rest.get('name'));
-console.log(rest.get(true));
-console.log(rest.get(1));
-console.log(rest.has('categories'));
-rest.delete(2);
-rest.clear();
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
+// console.log(rest.has('categories'));
+// rest.delete(2);
+// rest.clear();
 
 // Convert object to map
 
-console.log(Object.entries(openingHours));
-const hoursMap = new Map(Object.entries(openingHours));
-console.log(hoursMap);
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
 
 //  Convert map to array
 
-console.log(...hoursMap);
+// console.log(...hoursMap);
 
 //***********sets********
 // const orderSet = new Set(["Biriyani", "grill", "salad", "grill"]);
@@ -152,10 +152,6 @@ console.log(...hoursMap);
 //   console.log(order);
 // }
 //orderSet.clear();
-
-
-
-
 
 
 
@@ -176,8 +172,6 @@ console.log(...hoursMap);
 // for(const [day,{open,close}] of Object.entries(openingHours)){
 //   console.log(day,open,close);
 // }
-
-
 
 
 
@@ -225,8 +219,6 @@ console.log(...hoursMap);
 // console.log(`${index}: ${name}`);
 
 // }
-
-
 
 
 
@@ -296,7 +288,6 @@ console.log(...hoursMap);
 
 // restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 //  restaurant.orderPizza('mashrooms');
-
 
 
 

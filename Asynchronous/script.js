@@ -30,7 +30,7 @@ const countriesContainer = document.querySelector('.countries');
 // getCountryData('usa');
 ///////////////////////////////////////
 
-const renderCountryData = function (data) {
+const renderCountryData = function (data,className='') {
     const html = `<article class="country">
         <img class="country__img" src="${data.flag}" />
         <div class="country__data">
@@ -48,8 +48,22 @@ const renderCountryData = function (data) {
 
 
 const getCountryData=function(country){
-    fetch(`https://restcountries.eu/rest/v2/name/${country}`).then(responce=>responce.json()).then(data=>renderCountryData(data[0]));
+    fetch(`https://restcountries.eu/rest/v2/name/${country}`).
+    then(responce=>responce.json()).
+    then(data=>{
+      renderCountryData(data[0]);
+        
+       const neighbour = data[0].borders[0];
+       console.log(neighbour);
+
+       return fetch(`https://restcountries.eu/rest/v2/name/${neighbour}`);
+       
+    }).then(responce=>responce.json()).then(data=>{
+    renderCountryData(data[0],'neighbour');
+
+    });
 }
 
 
 getCountryData("Russia");
+getCountryData("usa");
